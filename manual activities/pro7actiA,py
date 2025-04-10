@@ -1,0 +1,19 @@
+import pandas as pd
+
+# List of dictionaries with product info
+products = [
+    {"product_name": "Laptop", "category": "Electronics", "price": 1000},
+    {"product_name": "T-Shirt", "category": "Clothing", "price": 25},
+    {"product_name": "Coffee Maker", "category": "Appliances", "price": 80},
+    {"product_name": "Headphones", "category": "Electronics", "price": 150},
+    {"product_name": "Book", "category": "Stationery", "price": 20}
+]
+
+# Create DataFrame
+df = pd.DataFrame(products)
+
+# Add a column for 90% discounted price
+df["discounted_price"] = df["price"] * 0.9
+
+# Display the DataFrame
+print(df)
